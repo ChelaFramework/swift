@@ -23,11 +23,11 @@ class Home: ViewHolder {
     router.pop()
   }
   
-  func resume(_ base: ChHolderBase<UIView>, _ isRestore: Bool) {
+  override func resume(_ base: ChHolderBase<ViewHolder.T>, _ isRestore: Bool) {
     view.isHidden = false
   }
   
-  func pause(_ base: ChHolderBase<UIView>, _ isJump: Bool) {
+  override func pause(_ base: ChHolderBase<ViewHolder.T>, _ isJump: Bool) {
     view.isHidden = true
   }
   

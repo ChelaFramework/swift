@@ -39,6 +39,7 @@ class ChRouter<H, T> where H.T == T, H: ChHolder {
     base._push(holder, false)
     stack.append(holder)
   }
+  @discardableResult
   func pop(_ isAutoUnlock: Bool = true) -> Int {
     guard !popLock else { return -1 }
     if !isAutoUnlock { popLock = true }
@@ -64,22 +65,4 @@ class ChRouter<H, T> where H.T == T, H: ChHolder {
       }
     }
   }
-}
-
-
-class SampleHolder: ChHolder {
-  func create(base: ChHolderBase<UIView>) -> UIView {
-    return UIView.init()
-  }
-
-  typealias T = UIView
-
-
-}
-class ChGroup : ChHolderBase<UIView> {
-
-}
-
-func test42423423() {
-  let router = ChRouter.init(of: SampleHolder.self, base: ChGroup.init())
 }

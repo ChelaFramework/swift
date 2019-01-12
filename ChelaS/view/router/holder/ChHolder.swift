@@ -12,13 +12,10 @@ import UIKit
 protocol ChHolder: class {
   associatedtype T
   func create(base: ChHolderBase<T>) -> T
-}
-
-extension ChHolder {
-  func push(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
-  func resume(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
-  func pause(_ base: ChHolderBase<T>, _ isJump: Bool) {}
-  func pop(_ base: ChHolderBase<T>, _ isJump: Bool) -> Bool { return true }
+  func push(_ base: ChHolderBase<T>, _ isRestore: Bool)
+  func resume(_ base: ChHolderBase<T>, _ isRestore: Bool)
+  func pause(_ base: ChHolderBase<T>, _ isJump: Bool)
+  func pop(_ base: ChHolderBase<T>, _ isJump: Bool) -> Bool
 }
 
 class ChHolderBase<T> {

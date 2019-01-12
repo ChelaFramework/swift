@@ -10,7 +10,12 @@ import Foundation
 import UIKit
 
 class ViewHolder: ChHolder {
-  func create(base: ChHolderBase<UIView>) -> UIView { return UIView.init() }
+  typealias T = UIView
+  func create(base: ChHolderBase<T>) -> T { return T.init() }
+  func push(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
+  func resume(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
+  func pause(_ base: ChHolderBase<T>, _ isJump: Bool) {}
+  func pop(_ base: ChHolderBase<T>, _ isJump: Bool) -> Bool { return true }
 }
 
 class Splash: ViewHolder {
@@ -26,12 +31,13 @@ class Splash: ViewHolder {
   @objc func buttonClicked(_ sender: UIButton) {
     router.push(holder: Home.shared, true)
   }
+
   
-  func resume(_ base: ChHolderBase<UIView>, _ isRestore: Bool) {
+  override func resume(_ base: ChHolderBase<ViewHolder.T>, _ isRestore: Bool) {
     view.isHidden = false
   }
   
-  func pause(_ base: ChHolderBase<UIView>, _ isJump: Bool) {
+  override func pause(_ base: ChHolderBase<ViewHolder.T>, _ isJump: Bool) {
     view.isHidden = true
   }
 }
