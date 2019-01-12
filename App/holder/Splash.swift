@@ -9,10 +9,14 @@
 import Foundation
 import UIKit
 
-class Splash: ChHolder {
+class ViewHolder: ChHolder {
+  func create(base: ChHolderBase<UIView>) -> UIView { return UIView.init() }
+}
+
+class Splash: ViewHolder {
   static let shared = Splash()
   
-  func create(base: ChHolderBase<UIView>) -> UIView {
+  override func create(base: ChHolderBase<UIView>) -> UIView {
     let view = UIButton()
     view.frame = CGRect(x: 20, y: 20, width: 100, height: 100)
     view.backgroundColor = .red
@@ -21,6 +25,7 @@ class Splash: ChHolder {
   }
   
   func buttonClicked(_ sender: UIButton) {
+    router.push(holder: Home.shared, false)
 //    ChRouter<T, self>.push(holder: Home, false)
 //    router.push(holder: Home.shared, false)
   }

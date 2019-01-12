@@ -9,11 +9,9 @@
 import Foundation
 import UIKit
 
-class Home: ChHolder {
-  typealias T = UIView
+class Home: ViewHolder {
   static let shared = Home()
-  
-  func create(base: ChHolderBase<UIView>) -> UIView {
+  override func create(base: ChHolderBase<UIView>) -> UIView {
     let view = UIView()
     view.backgroundColor = UIColor.blue
     return view

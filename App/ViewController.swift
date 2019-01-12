@@ -13,8 +13,8 @@ import UIKit
 //  return ChRouter.init(base: base)
 //}
 var groupBase: ChViewBase = ChViewBase()
-var router = { () -> ChRouter<Splash, Splash.T> in
-  return ChRouter.init(of: Splash.self, base: groupBase)
+var router = { () -> ChRouter<ViewHolder, ViewHolder.T> in
+  return ChRouter.init(of: ViewHolder.self, base: groupBase)
 }()
 
 class ViewController: UIViewController {
