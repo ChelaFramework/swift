@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class ChRouter<T> {
+  private let base: ChHolderBase<T>
+  init(base: ChHolderBase<T>) {
+    self.base = base
+  }
+}

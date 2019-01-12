@@ -7,3 +7,27 @@
 //
 
 import Foundation
+
+protocol ChHolderBaseProtocol {
+  associatedtype T
+  func _push(holder: ChHolder<T>)
+}
+
+extension ChHolderBaseProtocol {
+  func _push(holder: ChHolder<T>) {
+
+  }
+}
+
+class ChHolderBase<T>: ChHolderBaseProtocol {
+
+}
+
+
+protocol ChHolderProtocol {
+  associatedtype T
+}
+class ChHolder<T>: ChHolderProtocol {
+
+}
+
