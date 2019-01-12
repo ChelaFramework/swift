@@ -49,9 +49,29 @@ class ChHolderBase<T> {
 
   init() { }
   func _push<H: ChHolder>(_ holder: H, _ isRestore: Bool) where H.T == T {
+    push(holder: holder)
+    holder.push(base: self, isRestore: isRestore)
+    _resume(holder, isRestore)
+  }
+  
+  func _pop<H: ChHolder>(_ holder: H, _ isJump: Bool) where H.T == T {
     
   }
   
-  fileprivate func push() {}
+  func _pause<H: ChHolder>(_ holder: H, _ isJump: Bool) where H.T == T {
+    
+  }
+  
+  func _resume<H: ChHolder>(_ holder: H, _ isRestore: Bool) where H.T == T {
+    
+  }
+  
+  fileprivate func restore() {
+    
+  }
+  fileprivate func push<H: ChHolder>(holder: H) where H.T == T {}
+  func pop<H: ChHolder>(holder: H) where H.T == T {}
+  fileprivate func pause<H: ChHolder>(holder: H) where H.T == T {}
+  fileprivate func resume<H: ChHolder>(holder: H) where H.T == T {}
 }
 
