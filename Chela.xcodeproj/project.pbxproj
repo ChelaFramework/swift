@@ -13,10 +13,10 @@
 		3EBD3EAD21E9C06B00489824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD3EAC21E9C06B00489824 /* Assets.xcassets */; };
 		3EBD3EB021E9C06B00489824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD3EAE21E9C06B00489824 /* LaunchScreen.storyboard */; };
 		3EBD3EBB21E9C06B00489824 /* ChelaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD3EBA21E9C06B00489824 /* ChelaTests.swift */; };
+		8E3FB05B21EA13E9007F32DE /* ChViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3FB05A21EA13E9007F32DE /* ChViewControllerBase.swift */; };
 		A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98021E9CDAE009567BA /* ChRouter.swift */; };
 		A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98321E9CDC9009567BA /* ChHolder.swift */; };
-		A685C98821E9CDED009567BA /* ChGroupBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98721E9CDED009567BA /* ChGroupBase.swift */; };
-		A685C98A21EA107A009567BA /* UIButton+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98921EA107A009567BA /* UIButton+AddAction.swift */; };
+		A685C98821E9CDED009567BA /* ChViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98721E9CDED009567BA /* ChViewBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +40,10 @@
 		3EBD3EB621E9C06B00489824 /* ChelaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChelaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBD3EBA21E9C06B00489824 /* ChelaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChelaTests.swift; sourceTree = "<group>"; };
 		3EBD3EBC21E9C06B00489824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E3FB05A21EA13E9007F32DE /* ChViewControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChViewControllerBase.swift; sourceTree = "<group>"; };
 		A685C98021E9CDAE009567BA /* ChRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChRouter.swift; sourceTree = "<group>"; };
 		A685C98321E9CDC9009567BA /* ChHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChHolder.swift; sourceTree = "<group>"; };
-		A685C98721E9CDED009567BA /* ChGroupBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChGroupBase.swift; sourceTree = "<group>"; };
-		A685C98921EA107A009567BA /* UIButton+AddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AddAction.swift"; sourceTree = "<group>"; };
+		A685C98721E9CDED009567BA /* ChViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChViewBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,6 @@
 		3EBD3EC521E9C64800489824 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A685C98921EA107A009567BA /* UIButton+AddAction.swift */,
 				3EBD3EA521E9C06900489824 /* AppDelegate.swift */,
 				3EBD3EA721E9C06900489824 /* ViewController.swift */,
 				3EBD3EA921E9C06900489824 /* Main.storyboard */,
@@ -146,7 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				A685C98321E9CDC9009567BA /* ChHolder.swift */,
-				A685C98721E9CDED009567BA /* ChGroupBase.swift */,
+				A685C98721E9CDED009567BA /* ChViewBase.swift */,
+				8E3FB05A21EA13E9007F32DE /* ChViewControllerBase.swift */,
 			);
 			path = holder;
 			sourceTree = "<group>";
@@ -252,12 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E3FB05B21EA13E9007F32DE /* ChViewControllerBase.swift in Sources */,
 				3EBD3EA821E9C06900489824 /* ViewController.swift in Sources */,
 				A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */,
 				A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */,
 				3EBD3EA621E9C06900489824 /* AppDelegate.swift in Sources */,
-				A685C98821E9CDED009567BA /* ChGroupBase.swift in Sources */,
-				A685C98A21EA107A009567BA /* UIButton+AddAction.swift in Sources */,
+				A685C98821E9CDED009567BA /* ChViewBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
