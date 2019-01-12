@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FB0E1D821E9FB78001FAEA1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0E1D721E9FB78001FAEA1 /* Home.swift */; };
+		1FB0E1DC21EA0D0B001FAEA1 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0E1DB21EA0D0B001FAEA1 /* Splash.swift */; };
 		3EBD3EA621E9C06900489824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD3EA521E9C06900489824 /* AppDelegate.swift */; };
 		3EBD3EA821E9C06900489824 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD3EA721E9C06900489824 /* ViewController.swift */; };
 		3EBD3EAB21E9C06900489824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD3EA921E9C06900489824 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FB0E1D721E9FB78001FAEA1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1FB0E1DB21EA0D0B001FAEA1 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		3EBD3EA221E9C06900489824 /* Chela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBD3EA521E9C06900489824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EBD3EA721E9C06900489824 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FB0E1D621E9FB5B001FAEA1 /* holder */ = {
+			isa = PBXGroup;
+			children = (
+				1FB0E1D721E9FB78001FAEA1 /* Home.swift */,
+				1FB0E1DB21EA0D0B001FAEA1 /* Splash.swift */,
+			);
+			path = holder;
+			sourceTree = "<group>";
+		};
 		3EBD3E9921E9C06800489824 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +120,7 @@
 		3EBD3EC521E9C64800489824 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				1FB0E1D621E9FB5B001FAEA1 /* holder */,
 				3EBD3EA521E9C06900489824 /* AppDelegate.swift */,
 				3EBD3EA721E9C06900489824 /* ViewController.swift */,
 				3EBD3EA921E9C06900489824 /* Main.storyboard */,
@@ -255,8 +269,10 @@
 				3EBD3EA821E9C06900489824 /* ViewController.swift in Sources */,
 				A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */,
 				A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */,
+				1FB0E1DC21EA0D0B001FAEA1 /* Splash.swift in Sources */,
 				3EBD3EA621E9C06900489824 /* AppDelegate.swift in Sources */,
 				A685C98621E9CDD9009567BA /* ChHolderBase.swift in Sources */,
+				1FB0E1D821E9FB78001FAEA1 /* Home.swift in Sources */,
 				A685C98821E9CDED009567BA /* ChGroupBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
