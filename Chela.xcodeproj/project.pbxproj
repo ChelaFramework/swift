@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EBD3EA621E9C06900489824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD3EA521E9C06900489824 /* AppDelegate.swift */; };
+		3EBD3EA821E9C06900489824 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD3EA721E9C06900489824 /* ViewController.swift */; };
+		3EBD3EAB21E9C06900489824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD3EA921E9C06900489824 /* Main.storyboard */; };
+		3EBD3EAD21E9C06B00489824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD3EAC21E9C06B00489824 /* Assets.xcassets */; };
+		3EBD3EB021E9C06B00489824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD3EAE21E9C06B00489824 /* LaunchScreen.storyboard */; };
+		3EBD3EBB21E9C06B00489824 /* ChelaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD3EBA21E9C06B00489824 /* ChelaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EBD3EB721E9C06B00489824 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EBD3E9A21E9C06900489824 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EBD3EA121E9C06900489824;
+			remoteInfo = Chela;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3EBD3EA221E9C06900489824 /* Chela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chela.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EBD3EA521E9C06900489824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3EBD3EA721E9C06900489824 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3EBD3EAA21E9C06900489824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3EBD3EAC21E9C06B00489824 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EBD3EAF21E9C06B00489824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3EBD3EB121E9C06B00489824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EBD3EB621E9C06B00489824 /* ChelaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChelaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EBD3EBA21E9C06B00489824 /* ChelaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChelaTests.swift; sourceTree = "<group>"; };
+		3EBD3EBC21E9C06B00489824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EBD3E9F21E9C06900489824 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EBD3EB321E9C06B00489824 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EBD3E9921E9C06800489824 = {
+			isa = PBXGroup;
+			children = (
+				3EBD3EA421E9C06900489824 /* Chela */,
+				3EBD3EB921E9C06B00489824 /* ChelaTests */,
+				3EBD3EA321E9C06900489824 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3EBD3EA321E9C06900489824 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EBD3EA221E9C06900489824 /* Chela.app */,
+				3EBD3EB621E9C06B00489824 /* ChelaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EBD3EA421E9C06900489824 /* Chela */ = {
+			isa = PBXGroup;
+			children = (
+				3EBD3EA521E9C06900489824 /* AppDelegate.swift */,
+				3EBD3EA721E9C06900489824 /* ViewController.swift */,
+				3EBD3EA921E9C06900489824 /* Main.storyboard */,
+				3EBD3EAC21E9C06B00489824 /* Assets.xcassets */,
+				3EBD3EAE21E9C06B00489824 /* LaunchScreen.storyboard */,
+				3EBD3EB121E9C06B00489824 /* Info.plist */,
+			);
+			path = Chela;
+			sourceTree = "<group>";
+		};
+		3EBD3EB921E9C06B00489824 /* ChelaTests */ = {
+			isa = PBXGroup;
+			children = (
+				3EBD3EBA21E9C06B00489824 /* ChelaTests.swift */,
+				3EBD3EBC21E9C06B00489824 /* Info.plist */,
+			);
+			path = ChelaTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EBD3EA121E9C06900489824 /* Chela */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EBD3EBF21E9C06B00489824 /* Build configuration list for PBXNativeTarget "Chela" */;
+			buildPhases = (
+				3EBD3E9E21E9C06900489824 /* Sources */,
+				3EBD3E9F21E9C06900489824 /* Frameworks */,
+				3EBD3EA021E9C06900489824 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chela;
+			productName = Chela;
+			productReference = 3EBD3EA221E9C06900489824 /* Chela.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3EBD3EB521E9C06B00489824 /* ChelaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EBD3EC221E9C06B00489824 /* Build configuration list for PBXNativeTarget "ChelaTests" */;
+			buildPhases = (
+				3EBD3EB221E9C06B00489824 /* Sources */,
+				3EBD3EB321E9C06B00489824 /* Frameworks */,
+				3EBD3EB421E9C06B00489824 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EBD3EB821E9C06B00489824 /* PBXTargetDependency */,
+			);
+			name = ChelaTests;
+			productName = ChelaTests;
+			productReference = 3EBD3EB621E9C06B00489824 /* ChelaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EBD3E9A21E9C06900489824 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Chela;
+				TargetAttributes = {
+					3EBD3EA121E9C06900489824 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3EBD3EB521E9C06B00489824 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3EBD3EA121E9C06900489824;
+					};
+				};
+			};
+			buildConfigurationList = 3EBD3E9D21E9C06900489824 /* Build configuration list for PBXProject "Chela" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3EBD3E9921E9C06800489824;
+			productRefGroup = 3EBD3EA321E9C06900489824 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EBD3EA121E9C06900489824 /* Chela */,
+				3EBD3EB521E9C06B00489824 /* ChelaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EBD3EA021E9C06900489824 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EBD3EB021E9C06B00489824 /* LaunchScreen.storyboard in Resources */,
+				3EBD3EAD21E9C06B00489824 /* Assets.xcassets in Resources */,
+				3EBD3EAB21E9C06900489824 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EBD3EB421E9C06B00489824 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EBD3E9E21E9C06900489824 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EBD3EA821E9C06900489824 /* ViewController.swift in Sources */,
+				3EBD3EA621E9C06900489824 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EBD3EB221E9C06B00489824 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EBD3EBB21E9C06B00489824 /* ChelaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3EBD3EB821E9C06B00489824 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EBD3EA121E9C06900489824 /* Chela */;
+			targetProxy = 3EBD3EB721E9C06B00489824 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3EBD3EA921E9C06900489824 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EBD3EAA21E9C06900489824 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3EBD3EAE21E9C06B00489824 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EBD3EAF21E9C06B00489824 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EBD3EBD21E9C06B00489824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3EBD3EBE21E9C06B00489824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EBD3EC021E9C06B00489824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Chela/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chela.Chela;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3EBD3EC121E9C06B00489824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Chela/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chela.Chela;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3EBD3EC321E9C06B00489824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChelaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chela.ChelaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chela.app/Chela";
+			};
+			name = Debug;
+		};
+		3EBD3EC421E9C06B00489824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ChelaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chela.ChelaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chela.app/Chela";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EBD3E9D21E9C06900489824 /* Build configuration list for PBXProject "Chela" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EBD3EBD21E9C06B00489824 /* Debug */,
+				3EBD3EBE21E9C06B00489824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EBD3EBF21E9C06B00489824 /* Build configuration list for PBXNativeTarget "Chela" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EBD3EC021E9C06B00489824 /* Debug */,
+				3EBD3EC121E9C06B00489824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EBD3EC221E9C06B00489824 /* Build configuration list for PBXNativeTarget "ChelaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EBD3EC321E9C06B00489824 /* Debug */,
+				3EBD3EC421E9C06B00489824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EBD3E9A21E9C06900489824 /* Project object */;
+}
