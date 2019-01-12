@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 class ChRouter<T> {
-  private let base: ChHolderBase<T>
+  let base: ChHolderBase<T>
 //  private var stack = [ChHolder<T>]()
   private var pushLock = false
   private var popLock = false
@@ -22,4 +23,18 @@ class ChRouter<T> {
 ////      base._push(holder: it)
 //    }
   }
+  func push<H: ChHolder>(holder: H) where H.T == T {
+
+  }
+}
+
+
+
+class ChGroup : ChHolderBase<UIView> {
+
+}
+
+func test42423423() {
+  let router = ChRouter.init(base: ChGroup.init())
+//  router.push(holder: Sample.init())
 }

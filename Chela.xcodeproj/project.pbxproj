@@ -15,7 +15,7 @@
 		3EBD3EBB21E9C06B00489824 /* ChelaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD3EBA21E9C06B00489824 /* ChelaTests.swift */; };
 		A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98021E9CDAE009567BA /* ChRouter.swift */; };
 		A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98321E9CDC9009567BA /* ChHolder.swift */; };
-		A685C98621E9CDD9009567BA /* ChBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98521E9CDD9009567BA /* ChBase.swift */; };
+		A685C98621E9CDD9009567BA /* ChHolderBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98521E9CDD9009567BA /* ChHolderBase.swift */; };
 		A685C98821E9CDED009567BA /* ChGroupBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98721E9CDED009567BA /* ChGroupBase.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,7 @@
 		3EBD3EBC21E9C06B00489824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A685C98021E9CDAE009567BA /* ChRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChRouter.swift; sourceTree = "<group>"; };
 		A685C98321E9CDC9009567BA /* ChHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChHolder.swift; sourceTree = "<group>"; };
-		A685C98521E9CDD9009567BA /* ChBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChBase.swift; sourceTree = "<group>"; };
+		A685C98521E9CDD9009567BA /* ChHolderBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChHolderBase.swift; sourceTree = "<group>"; };
 		A685C98721E9CDED009567BA /* ChGroupBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChGroupBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				A685C98321E9CDC9009567BA /* ChHolder.swift */,
-				A685C98521E9CDD9009567BA /* ChBase.swift */,
+				A685C98521E9CDD9009567BA /* ChHolderBase.swift */,
 				A685C98721E9CDED009567BA /* ChGroupBase.swift */,
 			);
 			path = holder;
@@ -256,7 +256,7 @@
 				A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */,
 				A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */,
 				3EBD3EA621E9C06900489824 /* AppDelegate.swift in Sources */,
-				A685C98621E9CDD9009567BA /* ChBase.swift in Sources */,
+				A685C98621E9CDD9009567BA /* ChHolderBase.swift in Sources */,
 				A685C98821E9CDED009567BA /* ChGroupBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
