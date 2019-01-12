@@ -10,7 +10,16 @@ import Foundation
 
 class ChRouter<T> {
   private let base: ChHolderBase<T>
+//  private var stack = [ChHolder<T>]()
+  private var pushLock = false
+  private var popLock = false
   init(base: ChHolderBase<T>) {
     self.base = base
+    // TODO: self.base.router = self
+  }
+  func restore() {
+//    stack.forEach { it in
+////      base._push(holder: it)
+//    }
   }
 }

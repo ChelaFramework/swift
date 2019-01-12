@@ -23,16 +23,17 @@ import UIKit
 //}
 protocol ChHolderProtocol {
   associatedtype T
-  func create<T>(base: ChHolderBase<T>) -> T
+  func create(base: ChHolderBase<T>) -> T
   func push(base: ChHolderBase<T>, isRestore: Bool)
   func resume(base: ChHolderBase<T>, isRestore: Bool)
   func pause(base: ChHolderBase<T>, isJump: Bool)
   func pop(base: ChHolderBase<T>, isJump: Bool)
 }
 class ChHolder<T: UIView>: ChHolderProtocol {
-  func create<T>(base: ChHolderBase<T>) -> T {
-    return UIView.init()
-  }
+}
+
+func test() {
+  let holder = ChHolder<UIView>.init()
 }
 
 //object Main : ChHolder<View>() {
@@ -44,9 +45,9 @@ class ChHolder<T: UIView>: ChHolderProtocol {
 //
 //}
 
-extension ChHolderProtocol where T == UIView {
-  func create<T>(base: ChHolderBase<T>) -> T {
-    return UIView.init() as! T
+extension ChHolderProtocol where T: UIView {
+  func create(base: ChHolderBase<T>) -> T {
+    return UIView.init() as! Self.T
   }
 }
 
