@@ -13,6 +13,10 @@
 		3EBD3EAD21E9C06B00489824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD3EAC21E9C06B00489824 /* Assets.xcassets */; };
 		3EBD3EB021E9C06B00489824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD3EAE21E9C06B00489824 /* LaunchScreen.storyboard */; };
 		3EBD3EBB21E9C06B00489824 /* ChelaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD3EBA21E9C06B00489824 /* ChelaTests.swift */; };
+		A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98021E9CDAE009567BA /* ChRouter.swift */; };
+		A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98321E9CDC9009567BA /* ChHolder.swift */; };
+		A685C98621E9CDD9009567BA /* ChBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98521E9CDD9009567BA /* ChBase.swift */; };
+		A685C98821E9CDED009567BA /* ChGroupBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98721E9CDED009567BA /* ChGroupBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		3EBD3EB621E9C06B00489824 /* ChelaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChelaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBD3EBA21E9C06B00489824 /* ChelaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChelaTests.swift; sourceTree = "<group>"; };
 		3EBD3EBC21E9C06B00489824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A685C98021E9CDAE009567BA /* ChRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChRouter.swift; sourceTree = "<group>"; };
+		A685C98321E9CDC9009567BA /* ChHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChHolder.swift; sourceTree = "<group>"; };
+		A685C98521E9CDD9009567BA /* ChBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChBase.swift; sourceTree = "<group>"; };
+		A685C98721E9CDED009567BA /* ChGroupBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChGroupBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 		3EBD3E9921E9C06800489824 = {
 			isa = PBXGroup;
 			children = (
+				A685C97D21E9CD6A009567BA /* ChelaS */,
 				3EBD3EC521E9C64800489824 /* App */,
 				3EBD3EA421E9C06900489824 /* Chela */,
 				3EBD3EB921E9C06B00489824 /* ChelaTests */,
@@ -105,6 +114,41 @@
 				3EBD3EAE21E9C06B00489824 /* LaunchScreen.storyboard */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		A685C97D21E9CD6A009567BA /* ChelaS */ = {
+			isa = PBXGroup;
+			children = (
+				A685C97E21E9CD8D009567BA /* view */,
+			);
+			path = ChelaS;
+			sourceTree = "<group>";
+		};
+		A685C97E21E9CD8D009567BA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A685C97F21E9CD9E009567BA /* router */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A685C97F21E9CD9E009567BA /* router */ = {
+			isa = PBXGroup;
+			children = (
+				A685C98221E9CDB8009567BA /* holder */,
+				A685C98021E9CDAE009567BA /* ChRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		A685C98221E9CDB8009567BA /* holder */ = {
+			isa = PBXGroup;
+			children = (
+				A685C98321E9CDC9009567BA /* ChHolder.swift */,
+				A685C98521E9CDD9009567BA /* ChBase.swift */,
+				A685C98721E9CDED009567BA /* ChGroupBase.swift */,
+			);
+			path = holder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +253,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EBD3EA821E9C06900489824 /* ViewController.swift in Sources */,
+				A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */,
+				A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */,
 				3EBD3EA621E9C06900489824 /* AppDelegate.swift in Sources */,
+				A685C98621E9CDD9009567BA /* ChBase.swift in Sources */,
+				A685C98821E9CDED009567BA /* ChGroupBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
