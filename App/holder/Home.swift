@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Home: ViewHolder {
+class Home: ChViewHolder {
   static let shared = Home()
   private let view = UIButton()
   override func create(base: ChHolderBase<UIView>) -> UIView {
@@ -23,11 +23,11 @@ class Home: ViewHolder {
     router.pop()
   }
   
-  override func resume(_ base: ChHolderBase<ViewHolder.T>, _ isRestore: Bool) {
+  override func resume(_ base: ChHolderBase<ChViewHolder.T>, _ isRestore: Bool) {
     view.isHidden = false
   }
   
-  override func pause(_ base: ChHolderBase<ViewHolder.T>, _ isJump: Bool) {
+  override func pause(_ base: ChHolderBase<ChViewHolder.T>, _ isJump: Bool) {
     view.isHidden = true
   }
   

@@ -18,6 +18,15 @@ protocol ChHolder: class {
   func pop(_ base: ChHolderBase<T>, _ isJump: Bool) -> Bool
 }
 
+class ChViewHolder: ChHolder {
+  typealias T = UIView
+  func create(base: ChHolderBase<T>) -> T { return T.init() }
+  func push(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
+  func resume(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
+  func pause(_ base: ChHolderBase<T>, _ isJump: Bool) {}
+  func pop(_ base: ChHolderBase<T>, _ isJump: Bool) -> Bool { return true }
+}
+
 class ChHolderBase<T> {
 //  var router: ChRouter<T>!
   func _push<H>(_ holder: H, _ isRestore: Bool) where H.T == T, H: ChHolder {

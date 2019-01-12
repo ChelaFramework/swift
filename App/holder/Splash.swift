@@ -9,16 +9,7 @@
 import Foundation
 import UIKit
 
-class ViewHolder: ChHolder {
-  typealias T = UIView
-  func create(base: ChHolderBase<T>) -> T { return T.init() }
-  func push(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
-  func resume(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
-  func pause(_ base: ChHolderBase<T>, _ isJump: Bool) {}
-  func pop(_ base: ChHolderBase<T>, _ isJump: Bool) -> Bool { return true }
-}
-
-class Splash: ViewHolder {
+class Splash: ChViewHolder {
   static let shared = Splash()
   private let view = UIButton()
   override func create(base: ChHolderBase<UIView>) -> UIView {
@@ -33,11 +24,11 @@ class Splash: ViewHolder {
   }
 
   
-  override func resume(_ base: ChHolderBase<ViewHolder.T>, _ isRestore: Bool) {
+  override func resume(_ base: ChHolderBase<ChViewHolder.T>, _ isRestore: Bool) {
     view.isHidden = false
   }
   
-  override func pause(_ base: ChHolderBase<ViewHolder.T>, _ isJump: Bool) {
+  override func pause(_ base: ChHolderBase<ChViewHolder.T>, _ isJump: Bool) {
     view.isHidden = true
   }
 }

@@ -13,8 +13,8 @@ import UIKit
 //  return ChRouter.init(base: base)
 //}
 var groupBase: ChViewBase = ChViewBase()
-var router = { () -> ChRouter<ViewHolder, ViewHolder.T> in
-  return ChRouter.init(of: ViewHolder.self, base: groupBase)
+var router = { () -> ChRouter<ChViewHolder, ChViewHolder.T> in
+  return ChRouter.init(of: ChViewHolder.self, base: groupBase)
 }()
 
 class ViewController: UIViewController {
