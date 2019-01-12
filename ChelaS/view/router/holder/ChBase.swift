@@ -22,12 +22,3 @@ extension ChHolderBaseProtocol {
 class ChHolderBase<T>: ChHolderBaseProtocol {
 
 }
-
-
-protocol ChHolderProtocol {
-  associatedtype T
-}
-class ChHolder<T>: ChHolderProtocol {
-
-}
-
