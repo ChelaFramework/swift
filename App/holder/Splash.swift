@@ -15,18 +15,23 @@ class ViewHolder: ChHolder {
 
 class Splash: ViewHolder {
   static let shared = Splash()
-  
+  private let view = UIButton()
   override func create(base: ChHolderBase<UIView>) -> UIView {
-    let view = UIButton()
     view.frame = CGRect(x: 20, y: 20, width: 100, height: 100)
     view.backgroundColor = .red
-    view.addTarget(self, action: Selector("buttonClicked:"), for: .touchUpInside)
+    view.addTarget(self, action: #selector(Splash.buttonClicked(_:)), for: .touchUpInside)
     return view
   }
   
-  func buttonClicked(_ sender: UIButton) {
-    router.push(holder: Home.shared, false)
-//    ChRouter<T, self>.push(holder: Home, false)
-//    router.push(holder: Home.shared, false)
+  @objc func buttonClicked(_ sender: UIButton) {
+    router.push(holder: Home.shared, true)
+  }
+  
+  func resume(_ base: ChHolderBase<UIView>, _ isRestore: Bool) {
+    view.isHidden = false
+  }
+  
+  func pause(_ base: ChHolderBase<UIView>, _ isJump: Bool) {
+    view.isHidden = true
   }
 }

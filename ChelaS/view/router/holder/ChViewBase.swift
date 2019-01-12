@@ -16,7 +16,6 @@ class ChViewBase: ChHolderBase<UIView> {
     restore()
   }
   override func push<H>(_ holder: H) where UIView == H.T, H: ChHolder {
-    print("view base")
     view.addSubview(holder.create(base: self))
   }
   override func pop<H>(_ holder: H) where UIView == H.T, H: ChHolder {

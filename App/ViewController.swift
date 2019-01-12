@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
     groupBase.view(it: view)
-    router.push(holder: Splash.shared, false)
+    router.push(holder: Splash.shared, true)
 	}
 
 
