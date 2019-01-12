@@ -59,11 +59,15 @@
 		3EBD3E9921E9C06800489824 = {
 			isa = PBXGroup;
 			children = (
+				3EBD3EC521E9C64800489824 /* App */,
 				3EBD3EA421E9C06900489824 /* Chela */,
 				3EBD3EB921E9C06B00489824 /* ChelaTests */,
 				3EBD3EA321E9C06900489824 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
 		};
 		3EBD3EA321E9C06900489824 /* Products */ = {
 			isa = PBXGroup;
@@ -77,11 +81,6 @@
 		3EBD3EA421E9C06900489824 /* Chela */ = {
 			isa = PBXGroup;
 			children = (
-				3EBD3EA521E9C06900489824 /* AppDelegate.swift */,
-				3EBD3EA721E9C06900489824 /* ViewController.swift */,
-				3EBD3EA921E9C06900489824 /* Main.storyboard */,
-				3EBD3EAC21E9C06B00489824 /* Assets.xcassets */,
-				3EBD3EAE21E9C06B00489824 /* LaunchScreen.storyboard */,
 				3EBD3EB121E9C06B00489824 /* Info.plist */,
 			);
 			path = Chela;
@@ -94,6 +93,18 @@
 				3EBD3EBC21E9C06B00489824 /* Info.plist */,
 			);
 			path = ChelaTests;
+			sourceTree = "<group>";
+		};
+		3EBD3EC521E9C64800489824 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3EBD3EA521E9C06900489824 /* AppDelegate.swift */,
+				3EBD3EA721E9C06900489824 /* ViewController.swift */,
+				3EBD3EA921E9C06900489824 /* Main.storyboard */,
+				3EBD3EAC21E9C06B00489824 /* Assets.xcassets */,
+				3EBD3EAE21E9C06B00489824 /* LaunchScreen.storyboard */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Chela/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Chela/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
