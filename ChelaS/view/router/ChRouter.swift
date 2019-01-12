@@ -14,7 +14,7 @@ class ChRouter<T, H> where H.T == T, H: ChHolder {
   private var stack = [H]()
   private var pushLock = false
   private var popLock = false
-  init(base: ChHolderBase<T>) {
+  init(of: H.Type, base: ChHolderBase<T>) {
     self.base = base
     // TODO: self.base.router = self
   }
@@ -67,12 +67,19 @@ class ChRouter<T, H> where H.T == T, H: ChHolder {
 }
 
 
+class SampleHolder: ChHolder {
+  func create(base: ChHolderBase<UIView>) -> UIView {
+    return UIView.init()
+  }
 
+  typealias T = UIView
+
+
+}
 class ChGroup : ChHolderBase<UIView> {
 
 }
 
 func test42423423() {
-//  let router = ChRouter.init(base: ChGroup.init())
-//  router.push(holder: Sample.init())
+  let router = ChRouter.init(of: SampleHolder.self, base: ChGroup.init())
 }
