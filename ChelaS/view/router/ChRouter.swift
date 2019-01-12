@@ -36,7 +36,7 @@ class ChRouter<T, H: ChHolder> where H.T == T {
     if let last = stack.last {
 //      base._pause(last, false)
     }
-//    base._push(holder, false)
+    base._push(holder, false)
     stack.append(holder)
   }
   func pop(_ isAutoUnlock: Bool = true) -> Int {

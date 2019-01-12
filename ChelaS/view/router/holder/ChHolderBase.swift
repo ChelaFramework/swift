@@ -45,10 +45,10 @@ extension ChHolderBaseProtocol {
 //  }
 }
 
-class ChHolderBase<T, H: ChHolder> where H.T == T {
+class ChHolderBase<T> {
 
   init() { }
-  internal func _push(holder: H, isRestore:Bool) {
+  func _push<H: ChHolder>(_ holder: H, _ isRestore: Bool) where H.T == T {
     
   }
   
