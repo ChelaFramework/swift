@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-class ChRouter<T, H: ChHolder> where H.T == T {
-  let base: ChHolderBase<T>
+class ChRouter<T, H> where H.T == T, H: ChHolder {
+  private let base: ChHolderBase<T>
   private var stack = [H]()
   private var pushLock = false
   private var popLock = false
@@ -20,7 +20,7 @@ class ChRouter<T, H: ChHolder> where H.T == T {
   }
   func restore() {
     stack.forEach { it in
-//      base._push(holder: it)
+      base._push(it, true)
     }
   }
 
@@ -34,7 +34,7 @@ class ChRouter<T, H: ChHolder> where H.T == T {
     guard pushLock else { return }
     if !isAutoUnlock { pushLock = true }
     if let last = stack.last {
-//      base._pause(last, false)
+      base._pause(last, false)
     }
     base._push(holder, false)
     stack.append(holder)
@@ -44,10 +44,10 @@ class ChRouter<T, H: ChHolder> where H.T == T {
     if !isAutoUnlock { popLock = true }
 
     if let last = stack.last {
-//      base._pop(last, false)
+      base._pop(last, false)
       stack.removeLast()
       if let last = stack.last {
-//        base._resume(last, false)
+        base._resume(last, false)
       }
       return stack.count
     } else {
@@ -57,10 +57,10 @@ class ChRouter<T, H: ChHolder> where H.T == T {
   func jump(holder: H) {
     for i in (stack.count - 1)...0 {
       if stack[i] === holder {
-//        base._resume(holder, false)
+        base._resume(holder, false)
         break
       } else {
-//        base._pop(holder, true)
+        base._pop(holder, true)
       }
     }
   }
