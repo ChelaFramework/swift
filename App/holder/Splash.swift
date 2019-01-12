@@ -10,16 +10,18 @@ import Foundation
 import UIKit
 
 class Splash: ChHolder {
-  typealias T = UIView
   static let shared = Splash()
   
   func create(base: ChHolderBase<UIView>) -> UIView {
     let view = UIButton()
+    view.frame = CGRect(x: 20, y: 20, width: 100, height: 100)
+    view.backgroundColor = .red
     view.addTarget(self, action: Selector("buttonClicked:"), for: .touchUpInside)
     return view
   }
   
   func buttonClicked(_ sender: UIButton) {
-    ChRouter.push(Home, false)
+//    ChRouter<T, self>.push(holder: Home, false)
+//    router.push(holder: Home.shared, false)
   }
 }

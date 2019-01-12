@@ -8,11 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+//func router<T>(base: ChHolderBase<T>) -> ChRouter<T> {
+//  return ChRouter.init(base: base)
+//}
+var groupBase: ChViewBase = ChViewBase()
+var router = { () -> ChRouter<Splash, Splash.T> in
+  return ChRouter.init(of: Splash.self, base: groupBase)
+}()
+
+class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+    groupBase.view(it: view)
+    router.push(holder: Splash.shared, false)
 	}
 
 
