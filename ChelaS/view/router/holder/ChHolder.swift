@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ChHolder {
+protocol ChHolder: class {
   associatedtype T
   func create(base: ChHolderBase<T>) -> T
 }
