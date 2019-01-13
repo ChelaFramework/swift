@@ -8,19 +8,18 @@
 
 import UIKit
 
-
 //func router<T>(base: ChHolderBase<T>) -> ChRouter<T> {
 //  return ChRouter.init(base: base)
 //}
-var groupBase: ChViewBase = ChViewBase()
+var viewBase: ChViewBase = ChViewBase()
 var router = { () -> ChRouter<ChViewHolder, ChViewHolder.T> in
-  return ChRouter.init(of: ChViewHolder.self, base: groupBase)
+  return ChRouter.init(of: ChViewHolder.self, base: viewBase)
 }()
 
 class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
-    groupBase.view(it: view)
+    viewBase.view(view)
     router.push(holder: Splash.shared, true)
 	}
 

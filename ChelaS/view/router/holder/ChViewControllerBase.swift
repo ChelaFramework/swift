@@ -8,10 +8,19 @@
 
 import UIKit
 
+class ChViewControllerHolder: ChHolder {
+  typealias T = UIViewController
+  func create(base: ChHolderBase<T>) -> T { return T.init() }
+  func push(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
+  func resume(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
+  func pause(_ base: ChHolderBase<T>, _ isJump: Bool) {}
+  func pop(_ base: ChHolderBase<T>, _ isJump: Bool) -> Bool { return true }
+}
+
 class ChViewControllerBase: ChHolderBase<UIViewController> {
   var viewController: UIViewController!
-  func viewController(it: UIViewController) {
-    viewController = it
+  func viewController(_ vc: UIViewController) {
+    viewController = vc
     viewController.children.forEach { $0.removeFromParent() }
     restore()
   }

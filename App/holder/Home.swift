@@ -6,7 +6,6 @@
 //  Copyright © 2019 Chela. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class Home: ChViewHolder {
@@ -15,11 +14,11 @@ class Home: ChViewHolder {
   override func create(base: ChHolderBase<UIView>) -> UIView {
     view.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
     view.backgroundColor = .blue
-    view.addTarget(self, action: #selector(Home.buttonClicked(_:)), for: .touchUpInside)
+    view.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
     return view
   }
   
-  @objc func buttonClicked(_ sender: UIButton) {
+  @objc private func buttonClicked(_ sender: UIButton) {
     router.pop()
   }
   

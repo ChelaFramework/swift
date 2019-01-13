@@ -6,7 +6,6 @@
 //  Copyright © 2019 Chela. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class Splash: ChViewHolder {
@@ -15,11 +14,11 @@ class Splash: ChViewHolder {
   override func create(base: ChHolderBase<UIView>) -> UIView {
     view.frame = CGRect(x: 20, y: 20, width: 100, height: 100)
     view.backgroundColor = .red
-    view.addTarget(self, action: #selector(Splash.buttonClicked(_:)), for: .touchUpInside)
+    view.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
     return view
   }
   
-  @objc func buttonClicked(_ sender: UIButton) {
+  @objc private func buttonClicked(_ sender: UIButton) {
     router.push(holder: Home.shared, true)
   }
 
