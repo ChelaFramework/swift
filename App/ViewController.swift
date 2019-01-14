@@ -8,13 +8,8 @@
 
 import UIKit
 
-//func router<T>(base: ChHolderBase<T>) -> ChRouter<T> {
-//  return ChRouter.init(base: base)
-//}
 var viewBase: ChViewBase = ChViewBase()
-var router = { () -> ChRouter<ChViewHolder, ChViewHolder.T> in
-  return ChRouter.init(of: ChViewHolder.self, base: viewBase)
-}()
+var router = { return ChRouter.init(of: ChViewHolder.self, base: viewBase) }()
 
 class ViewController: UIViewController {
 	override func viewDidLoad() {
@@ -22,7 +17,5 @@ class ViewController: UIViewController {
     viewBase.view(view)
     router.push(holder: Splash.shared, true)
 	}
-
-
 }
 
