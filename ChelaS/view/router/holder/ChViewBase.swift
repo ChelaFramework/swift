@@ -10,11 +10,35 @@ import UIKit
 
 class ChViewHolder: ChHolder {
   typealias T = UIView
-  func create(base: ChHolderBase<T>) -> T { return T.init() }
-  func push(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
-  func resume(_ base: ChHolderBase<T>, _ isRestore: Bool) {}
-  func pause(_ base: ChHolderBase<T>, _ isJump: Bool) {}
-  func pop(_ base: ChHolderBase<T>, _ isJump: Bool) -> Bool { return true }
+  final func create(base: ChHolderBase<T>) -> T { return T.init() }
+  final func push(_ base: ChHolderBase<T>, _ isRestore: Bool) {
+    if let vBase = base as? ChViewBase {
+      push(vBase, isRestore)
+    }
+  }
+  final func resume(_ base: ChHolderBase<T>, _ isRestore: Bool) {
+    if let vBase = base as? ChViewBase {
+      resume(vBase, isRestore)
+    }
+  }
+  final func pause(_ base: ChHolderBase<T>, _ isJump: Bool) {
+    if let vBase = base as? ChViewBase {
+      pause(vBase, isJump)
+    }
+  }
+  final func pop(_ base: ChHolderBase<T>, _ isJump: Bool) -> Bool {
+    if let vBase = base as? ChViewBase {
+      return pop(vBase, isJump)
+    }
+    return true
+  }
+
+  func create(base: ChViewBase) -> UIView { return UIView.init() }
+  func push(_ base: ChViewBase, _ isRestore: Bool) {}
+  func resume(_ base: ChViewBase, _ isRestore: Bool) {}
+  func pause(_ base: ChViewBase, _ isJump: Bool) {}
+  func pop(_ base: ChViewBase, _ isJump: Bool) -> Bool { return true }
+
 }
 
 class ChViewBase: ChHolderBase<UIView> {
