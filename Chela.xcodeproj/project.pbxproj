@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1FB0E1F621EA1A18001FAEA1 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0E1F421EA1A18001FAEA1 /* Splash.swift */; };
 		1FB0E1F721EA1A18001FAEA1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0E1F521EA1A18001FAEA1 /* Home.swift */; };
+		1FB4D51C21EE080300CDF95E /* ChItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB4D51B21EE080300CDF95E /* ChItem.swift */; };
+		1FB4D51E21EE1CDB00CDF95E /* ChLooper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB4D51D21EE1CDB00CDF95E /* ChLooper.swift */; };
 		3EBD3EA621E9C06900489824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD3EA521E9C06900489824 /* AppDelegate.swift */; };
 		3EBD3EA821E9C06900489824 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD3EA721E9C06900489824 /* ViewController.swift */; };
 		3EBD3EAB21E9C06900489824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBD3EA921E9C06900489824 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		1FB0E1F421EA1A18001FAEA1 /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		1FB0E1F521EA1A18001FAEA1 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1FB4D51B21EE080300CDF95E /* ChItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChItem.swift; sourceTree = "<group>"; };
+		1FB4D51D21EE1CDB00CDF95E /* ChLooper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChLooper.swift; sourceTree = "<group>"; };
 		3EBD3EA221E9C06900489824 /* Chela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBD3EA521E9C06900489824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EBD3EA721E9C06900489824 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,15 @@
 				1FB0E1F521EA1A18001FAEA1 /* Home.swift */,
 			);
 			path = holder;
+			sourceTree = "<group>";
+		};
+		1FB4D51A21EE07F300CDF95E /* looper */ = {
+			isa = PBXGroup;
+			children = (
+				1FB4D51B21EE080300CDF95E /* ChItem.swift */,
+				1FB4D51D21EE1CDB00CDF95E /* ChLooper.swift */,
+			);
+			path = looper;
 			sourceTree = "<group>";
 		};
 		3EBD3E9921E9C06800489824 = {
@@ -135,6 +148,7 @@
 		A685C97D21E9CD6A009567BA /* ChelaS */ = {
 			isa = PBXGroup;
 			children = (
+				1FB4D51A21EE07F300CDF95E /* looper */,
 				A6A33B2A21EE04D200B694C1 /* net */,
 				A685C97E21E9CD8D009567BA /* view */,
 			);
@@ -278,12 +292,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FB0E1F621EA1A18001FAEA1 /* Splash.swift in Sources */,
+				1FB4D51E21EE1CDB00CDF95E /* ChLooper.swift in Sources */,
 				8E3FB05B21EA13E9007F32DE /* ChViewControllerBase.swift in Sources */,
 				3EBD3EA821E9C06900489824 /* ViewController.swift in Sources */,
 				A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */,
 				A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */,
 				3EBD3EA621E9C06900489824 /* AppDelegate.swift in Sources */,
 				A6A33B2C21EE054700B694C1 /* ChHttp.swift in Sources */,
+				1FB4D51C21EE080300CDF95E /* ChItem.swift in Sources */,
 				1FB0E1F721EA1A18001FAEA1 /* Home.swift in Sources */,
 				A685C98821E9CDED009567BA /* ChViewBase.swift in Sources */,
 			);
