@@ -19,6 +19,7 @@
 		A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98021E9CDAE009567BA /* ChRouter.swift */; };
 		A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98321E9CDC9009567BA /* ChHolder.swift */; };
 		A685C98821E9CDED009567BA /* ChViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98721E9CDED009567BA /* ChViewBase.swift */; };
+		A6A2F16621F7DAAB00CD34C4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A2F16521F7DAAB00CD34C4 /* Model.swift */; };
 		A6A33B2C21EE054700B694C1 /* ChHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A33B2B21EE054700B694C1 /* ChHttp.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		A685C98021E9CDAE009567BA /* ChRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChRouter.swift; sourceTree = "<group>"; };
 		A685C98321E9CDC9009567BA /* ChHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChHolder.swift; sourceTree = "<group>"; };
 		A685C98721E9CDED009567BA /* ChViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChViewBase.swift; sourceTree = "<group>"; };
+		A6A2F16521F7DAAB00CD34C4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A6A33B2B21EE054700B694C1 /* ChHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChHttp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 		A685C97D21E9CD6A009567BA /* ChelaS */ = {
 			isa = PBXGroup;
 			children = (
+				A6A2F16421F7DAAB00CD34C4 /* model */,
 				A6A33B2A21EE04D200B694C1 /* net */,
 				A685C97E21E9CD8D009567BA /* view */,
 			);
@@ -166,6 +169,14 @@
 				8E3FB05A21EA13E9007F32DE /* ChViewControllerBase.swift */,
 			);
 			path = holder;
+			sourceTree = "<group>";
+		};
+		A6A2F16421F7DAAB00CD34C4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A6A2F16521F7DAAB00CD34C4 /* Model.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		A6A33B2A21EE04D200B694C1 /* net */ = {
@@ -282,6 +293,7 @@
 				3EBD3EA821E9C06900489824 /* ViewController.swift in Sources */,
 				A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */,
 				A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */,
+				A6A2F16621F7DAAB00CD34C4 /* Model.swift in Sources */,
 				3EBD3EA621E9C06900489824 /* AppDelegate.swift in Sources */,
 				A6A33B2C21EE054700B694C1 /* ChHttp.swift in Sources */,
 				1FB0E1F721EA1A18001FAEA1 /* Home.swift in Sources */,
