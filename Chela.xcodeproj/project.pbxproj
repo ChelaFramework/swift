@@ -21,6 +21,7 @@
 		8E3FB05B21EA13E9007F32DE /* ChViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3FB05A21EA13E9007F32DE /* ChViewControllerBase.swift */; };
 		8E73506721EF2CFC00F18A0C /* ChResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73506521EF2CFC00F18A0C /* ChResponse.swift */; };
 		8E73506821EF2CFC00F18A0C /* ChNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E73506621EF2CFC00F18A0C /* ChNet.swift */; };
+		8E969DEF22009DDB000785FB /* ChRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E969DEE22009DDA000785FB /* ChRule.swift */; };
 		A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98021E9CDAE009567BA /* ChRouter.swift */; };
 		A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98321E9CDC9009567BA /* ChHolder.swift */; };
 		A685C98821E9CDED009567BA /* ChViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98721E9CDED009567BA /* ChViewBase.swift */; };
@@ -60,6 +61,7 @@
 		8E3FB05A21EA13E9007F32DE /* ChViewControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChViewControllerBase.swift; sourceTree = "<group>"; };
 		8E73506521EF2CFC00F18A0C /* ChResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChResponse.swift; sourceTree = "<group>"; };
 		8E73506621EF2CFC00F18A0C /* ChNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChNet.swift; sourceTree = "<group>"; };
+		8E969DEE22009DDA000785FB /* ChRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChRule.swift; sourceTree = "<group>"; };
 		A685C98021E9CDAE009567BA /* ChRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChRouter.swift; sourceTree = "<group>"; };
 		A685C98321E9CDC9009567BA /* ChHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChHolder.swift; sourceTree = "<group>"; };
 		A685C98721E9CDED009567BA /* ChViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChViewBase.swift; sourceTree = "<group>"; };
@@ -172,9 +174,18 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		8E969DED22009D78000785FB /* validation */ = {
+			isa = PBXGroup;
+			children = (
+				8E969DEE22009DDA000785FB /* ChRule.swift */,
+			);
+			path = validation;
+			sourceTree = "<group>";
+		};
 		A685C97D21E9CD6A009567BA /* ChelaS */ = {
 			isa = PBXGroup;
 			children = (
+				8E969DED22009D78000785FB /* validation */,
 				1FB4D51A21EE07F300CDF95E /* looper */,
 				A6A33B2A21EE04D200B694C1 /* net */,
 				A685C97E21E9CD8D009567BA /* view */,
@@ -403,6 +414,7 @@
 			files = (
 				1FB0E1F621EA1A18001FAEA1 /* Splash.swift in Sources */,
 				1FB4D51E21EE1CDB00CDF95E /* ChLooper.swift in Sources */,
+				8E969DEF22009DDB000785FB /* ChRule.swift in Sources */,
 				8E3FB05B21EA13E9007F32DE /* ChViewControllerBase.swift in Sources */,
 				3EBD3EA821E9C06900489824 /* ViewController.swift in Sources */,
 				A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */,
@@ -579,7 +591,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5M2GQ2DR6P;
 				INFOPLIST_FILE = Chela/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -599,7 +611,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5M2GQ2DR6P;
 				INFOPLIST_FILE = Chela/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
