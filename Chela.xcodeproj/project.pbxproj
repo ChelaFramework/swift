@@ -25,6 +25,7 @@
 		A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98021E9CDAE009567BA /* ChRouter.swift */; };
 		A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98321E9CDC9009567BA /* ChHolder.swift */; };
 		A685C98821E9CDED009567BA /* ChViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685C98721E9CDED009567BA /* ChViewBase.swift */; };
+		A6899C2322011A06001A3D8A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6899C2222011A06001A3D8A /* Model.swift */; };
 		A6A33B2C21EE054700B694C1 /* ChHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A33B2B21EE054700B694C1 /* ChHttp.swift */; };
 		E0AC3FD5609873AA08FEFE8A /* Pods_Chela.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4616410CB497BE6F6BF3540 /* Pods_Chela.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		A685C98021E9CDAE009567BA /* ChRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChRouter.swift; sourceTree = "<group>"; };
 		A685C98321E9CDC9009567BA /* ChHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChHolder.swift; sourceTree = "<group>"; };
 		A685C98721E9CDED009567BA /* ChViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChViewBase.swift; sourceTree = "<group>"; };
+		A6899C2222011A06001A3D8A /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A6A33B2B21EE054700B694C1 /* ChHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChHttp.swift; sourceTree = "<group>"; };
 		BE641638E19BEB871EE85F88 /* Pods-ChelaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChelaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChelaTests/Pods-ChelaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4616410CB497BE6F6BF3540 /* Pods_Chela.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chela.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				8E969DED22009D78000785FB /* validation */,
+				A6899C2122011A06001A3D8A /* model */,
 				1FB4D51A21EE07F300CDF95E /* looper */,
 				A6A33B2A21EE04D200B694C1 /* net */,
 				A685C97E21E9CD8D009567BA /* view */,
@@ -218,6 +221,14 @@
 				8E3FB05A21EA13E9007F32DE /* ChViewControllerBase.swift */,
 			);
 			path = holder;
+			sourceTree = "<group>";
+		};
+		A6899C2122011A06001A3D8A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A6899C2222011A06001A3D8A /* Model.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		A6A33B2A21EE04D200B694C1 /* net */ = {
@@ -416,6 +427,7 @@
 				1FB4D51E21EE1CDB00CDF95E /* ChLooper.swift in Sources */,
 				8E969DEF22009DDB000785FB /* ChRule.swift in Sources */,
 				8E3FB05B21EA13E9007F32DE /* ChViewControllerBase.swift in Sources */,
+				A6899C2322011A06001A3D8A /* Model.swift in Sources */,
 				3EBD3EA821E9C06900489824 /* ViewController.swift in Sources */,
 				A685C98121E9CDAE009567BA /* ChRouter.swift in Sources */,
 				A685C98421E9CDC9009567BA /* ChHolder.swift in Sources */,
