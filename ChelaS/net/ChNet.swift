@@ -11,43 +11,43 @@ import Foundation
 typealias requestTaskF = (ChHttp, [(String, Any)]) -> Bool
 typealias responseTaskF = (_ response: ChResponse) -> Bool
 
-//struct ChNet {
-//  struct Api {
-//    let url: String
-//    let method: String
-//    let requestTask: [String]
-//    let responseTask: [String]
-//    let request: [String: ApiRequest]
-//  }
-//
-//  struct ApiRequest {
-//    let name: String
-//    let rules: String
-//    let task: [String]
-//  }
-//
-//  private let apis = [String: Api]()
-//  private var requestTask = [String: requestTaskF]()
-//  private var requestItemTask = [String: (Any) -> Any?]()
-//  private var responseTask = [String: responseTaskF]()
-//
-//  mutating func apiRequestTask(key: String, block: @escaping requestTaskF) {
-//    requestTask[key] = block
-//  }
-//
-//  mutating func apiRequestItemTask(key: String, block: @escaping (Any) -> Any?) {
-//    requestItemTask[key] = block
-//  }
-//
-//  mutating func apiResponseTask(key: String, block: @escaping responseTaskF) {
-//    responseTask[key] = block
-//  }
-//
+struct ChNet {
+  struct Api {
+    let url: String
+    let method: String
+    let requestTask: [String]
+    let responseTask: [String]
+    let request: [String: ApiRequest]
+  }
+
+  struct ApiRequest {
+    let name: String
+    let rules: String
+    let task: [String]
+  }
+
+  private let apis = [String: Api]()
+  private var requestTask = [String: requestTaskF]()
+  private var requestItemTask = [String: (Any) -> Any?]()
+  private var responseTask = [String: responseTaskF]()
+
+  mutating func apiRequestTask(key: String, block: @escaping requestTaskF) {
+    requestTask[key] = block
+  }
+
+  mutating func apiRequestItemTask(key: String, block: @escaping (Any) -> Any?) {
+    requestItemTask[key] = block
+  }
+
+  mutating func apiResponseTask(key: String, block: @escaping responseTaskF) {
+    responseTask[key] = block
+  }
+
 //  func getApi(k: String) -> Api? {
 //    api.get()
 //    return apis[k]
 //  }
-//
+
 //  func setApi(k: String, url: String, method: String, reqTask: String, resTask: String, req: [String: [String]], isWriteDB: Bool = true) {
 //    if isWriteDB {
 //      api.addApi(k, url, method, reqTask, resTask)
@@ -153,9 +153,9 @@ typealias responseTaskF = (_ response: ChResponse) -> Bool
 //    }
 //    return Ch.ApiResult.ok
 //  }
-//  func http(method:String, url:String) -> ChHttp {
-//    return ChHttpOk3(method, Request.Builder().url(url))
-//  }
+  func http(url: String, method: String = "GET") -> ChHttp? {
+    return ChHttp(url: url, method: method)
+  }
 //  func isOn() -> Bool {
 //    return connectedType() != Ch.NONE
 //  }
@@ -180,7 +180,7 @@ typealias responseTaskF = (_ response: ChResponse) -> Bool
 //    }
 //    return Ch.NONE
 //  }
-//}
+}
 
 
 //typealias requestTaskF = (http:ChHttp, arg:MutableList<Pair<String, Any>>, taskArg:List<String>)->Boolean
