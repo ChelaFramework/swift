@@ -13,7 +13,14 @@ typealias ItemBlock = (ChItem)->Void
 typealias Now = ()->Double
 let empty: ItemBlock = {_ in }
 let now: Now = { Date().timeIntervalSinceNow }
+
+fileprivate let concurrentQueue = DispatchQueue(
+    label: "com.chela.lopper.queue",
+    attributes: .concurrent
+)
+
 class ChLooper: UIView {
+
   enum Item {
     case Time(ms: Int)
     case Delay(ms: Int)
@@ -53,59 +60,62 @@ class ChLooper: UIView {
     remove.removeAll()
     add.removeAll()
 
-    var i = 0
-    while i < items.count {
-      let item = items[i]
-      i += 1
-      if item.isPaused || item.start > c {
-        break
-      }
-      item.isTurn = false
-      var isEnd = false
-      item.rate = {
-        if !item.isInfinity && item.end <= c {
-          item.loop -= 1
-          if item.loop == 0 {
-            isEnd = true
-            return 1.0
-          } else {
-            item.isTurn = true
-            item.start = c
-            item.end = c + item.term
+    concurrentQueue.sync {
+      var i = 0
+      while i < items.count {
+        let item = items[i]
+        i += 1
+        if item.isPaused || item.start > c {
+          break
+        }
+        item.isTurn = false
+        var isEnd = false
+        item.rate = {
+          if !item.isInfinity && item.end <= c {
+            item.loop -= 1
+            if item.loop == 0 {
+              isEnd = true
+              return 1.0
+            } else {
+              item.isTurn = true
+              item.start = c
+              item.end = c + item.term
+              return 0.0
+            }
+          } else if item.term == 0.0 {
             return 0.0
+          } else {
+            return (c - item.start) / item.term
           }
-        } else if item.term == 0.0 {
-          return 0.0
-        } else {
-          return (c - item.start) / item.term
+        }()
+        item.current = c
+        item.isStop = false
+        item.block(item)
+        if item.isStop || isEnd {
+          item.ended(item)
+          if let n = item.next {
+            n.start += c
+            n.end = n.start + n.term
+            add.append(n)
+          }
+          remove.append(item)
         }
-      }()
-      item.current = c
-      item.isStop = false
-      item.block(item)
-      if item.isStop || isEnd {
-        item.ended(item)
-        if let n = item.next {
-          n.start += c
-          n.end = n.start + n.term
-          add.append(n)
-        }
-        remove.append(item)
       }
     }
 
     if !remove.isEmpty || !add.isEmpty {
-
-      if !remove.isEmpty {
-        items = items.filter { v in
-          remove.contains(where: { $0 === v })
+      concurrentQueue.async(flags: .barrier) { [weak self] in
+        guard let self = self else { return }
+        if !self.remove.isEmpty {
+          self.items = self.items.filter { v in
+            self.remove.contains { $0 === v }
+          }
+          self.itemPool = self.itemPool + self.remove
         }
-        itemPool = itemPool + remove
+        if !self.add.isEmpty {
+          self.items = self.items + self.add
+        }
       }
-      if !add.isEmpty {
-        items = items + add
-      }
-
     }
 
   }
