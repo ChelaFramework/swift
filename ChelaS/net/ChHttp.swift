@@ -62,12 +62,11 @@ class ChHttp : ChHttpProtocol {
   private var body: String?
   private var multi: MultipartFormData? // MultipartBody.Builder?
 
-  init?(method: String, url: String) {
+  init?(url: String, method: String = "GET") {
     guard let method = HTTPMethod(rawValue: method),
       let url = URL(string: url) else { return nil }
     self.method = method
     self.url = url
-
   }
 
   @discardableResult
@@ -113,6 +112,7 @@ class ChHttp : ChHttpProtocol {
   }
 
   func send(callback: @escaping HttpCallBack) {
+    /* 업로드용
     Alamofire.upload(
       multipartFormData: { [weak self] (multipartFormData) in
         guard let self = self else { return }
@@ -142,6 +142,8 @@ class ChHttp : ChHttpProtocol {
         }
       }
     )
+    */
+
 //    if method != .get {
 //      if let multi = multi {
 //    Alamofire.upload
@@ -180,14 +182,14 @@ class ChHttp : ChHttpProtocol {
 //      }
 //    }
 
-    Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseData { res in
-
-      guard let data = res.data else {
+    Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON { res in
+      guard res.data != nil else {
         print("fail")
+        callback(ChResponse(response: nil, err: "fail"))
         return
       }
       print("success")
-
+      callback(ChResponse(response: res, err: nil))
 
 //      .responseJSON { response in
 //      switch response.result {
