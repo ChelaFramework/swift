@@ -19,6 +19,25 @@ fileprivate let concurrentQueue = DispatchQueue(
     attributes: .concurrent
 )
 
+func testaaaaa123123() {
+  ChLooper { dsl in
+    dsl.time = 350
+    dsl.block = { item in
+//      item.backIn(from: <#T##Double#>, to: <#T##Double#>)
+    }
+  } + { dsl in
+  }
+}
+
+class ItemDSL {
+  var time: Int = -1
+  var delay: Int = 0
+  var loop: Int = 1
+  var block: ItemBlock = empty
+  var ended: ItemBlock = empty
+  var isInfinity: Bool = false
+}
+
 class ChLooper: UIView {
 
   enum Item {
@@ -32,6 +51,21 @@ class ChLooper: UIView {
   override func draw(_ rect: CGRect) {
 
   }
+
+  var ref: ChLooper?
+
+  convenience init (_ block: (ItemDSL) -> Void) {
+    self.init()
+    let i = ItemDSL()
+    block(i)
+  }
+
+  @discardableResult
+  static func + (lhs: ChLooper, rhs: (ItemDSL) -> Void) -> ChLooper {
+    lhs.ref = ChLooper(rhs)
+    return lhs.ref!
+  }
+
 
   private class Ani {
     let looper = ChLooper()
@@ -119,17 +153,29 @@ class ChLooper: UIView {
     }
 
   }
-  func invoke(param: Item..., block: ItemBlock = empty) -> Sequence {
+  func invoke(block: (ItemDSL) -> Void) -> Sequence {
+    let dsl = ItemDSL()
+    block(dsl)
+    let item = getItem(dsl)
+    item.start += now()
+    item.end = item.term == -1.0 ? -1.0 : item.start + item.term
+    concurrentQueue.sync(flags: .barrier) { [weak self] in
+      self?.items.append(item)
+    }
+    sequence.item = item
     return Sequence(looper: self)
   }
 
-  func getItem(param: Item..., block: ItemBlock = empty) -> ChItem {
+  func getItem(_ i: ItemDSL) -> ChItem {
     var item: ChItem! = itemPool.removeLast()
-
-    if item == nil {
-      item = ChItem()
-    }
-
+    if item == nil { item = ChItem() }
+    item.term  = Double(i.time)
+    item.start = Double(i.delay)
+    item.loop  = i.loop
+    item.block = i.block
+    item.ended = i.ended
+    item.isInfinity = i.isInfinity
+    item.next  = nil
     return item
   }
 // https://github.com/ChelaFramework/ios/blob/9102f458a50695d04e816313c4f8094febe5c1c5/Empty/MV/ChLooper.m
@@ -144,7 +190,7 @@ class ChLooper: UIView {
   
   class Sequence {
     private let looper: ChLooper
-//    internal var item: ChItem
+    var item: ChItem?
     init(looper: ChLooper) {
       self.looper = looper
     }
